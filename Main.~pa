@@ -1,0 +1,36 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, ExtCtrls, Db, DBTables, PrintPreview, PagePrnt;
+
+type
+  TMain = class(TForm)
+    Preview: TBitBtn;
+    Table1: TTable;
+    DataSource1: TDataSource;
+    procedure PreviewClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+   Main: TMain;
+
+implementation
+
+{$R *.DFM}
+
+procedure TMain.PreviewClick(Sender: TObject);
+var
+   Form2: TForm2;
+begin
+     Form2 := TForm2.Create(Self);
+     Form2.ShowModal;
+end;
+
+end.
